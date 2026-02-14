@@ -160,7 +160,7 @@ const [value, setValue] = useState<number | null>(null);
 
         <div className="mt-4 text-xs text-gray-400">
           <script async data-cfasync="false"
-            src="https://pl28711344.effectivegatecpm.com/5b5bf815e7c29166adc6213372361177/invoke.js"></script>
+            src="https://pl28677830.effectivegatecpm.com/53625cd16e79dc4f5be82578d256686f/invoke.js"></script>
           <div id="container-53625cd16e79dc4f5be82578d256686f"></div>
         </div>
       </div>

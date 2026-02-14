@@ -93,7 +93,7 @@ function NivelAtractivo() {
 
   const abrirPublicidad = () => {
     const script = document.createElement("script");
-    script.src = "https://pl28711344.effectivegatecpm.com/5b5bf815e7c29166adc6213372361177/invoke.js";
+    script.src = "https://pl28698498.effectivegatecpm.com/af/47/e5/af47e5f5902cc0de8bbfb7592188853b.js";
     script.async = true;
     document.body.appendChild(script);
 
