@@ -2,12 +2,11 @@ export default function Home() {
   return (
     <div>
       <h1>PeopleHint</h1>
-      <p>Descubre lo que sienten por ti 👀</p>
+      <p>Apps  y Test para ti 👀</p>
 
-      <a href="/amor">💖 Amor</a><br />
-      <a href="/magnetismo">🧲 Magnetismo</a><br />
-      <a href="/energia">✨ Energía</a><br />
-      <a href="/trabajo">💼 Trabajo</a>
+      <a href="/nivel-atractivo">💖Nivel de Atractivo</a><br />
+      <a href="/quien-piensa">🧲 ¿Quién piensa en ti?</a><br />
+     
     </div>
   );
 }
