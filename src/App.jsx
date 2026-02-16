@@ -5,6 +5,7 @@ import QuienObserva from "./pages/QuienObserva";
 import Home from "./pages/Home"
 import PercepcinSocial from "./pages/PercepcionSocial"
 
+
 export default function App() {
   return (
     <Routes>
