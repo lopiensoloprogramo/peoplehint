@@ -1,3 +1,5 @@
+
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-500 to-purple-700 flex flex-col items-center justify-start text-white px-4 pt-16">
