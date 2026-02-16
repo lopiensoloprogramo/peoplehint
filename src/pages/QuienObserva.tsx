@@ -148,9 +148,9 @@ const generarNombre = () => {
       ))}
     </ul>
 
-    <small>(Solo uno es real)</small>
+    <p>(Solo uno es real)</p>
 <br></br>
-    <button className="btn small" onClick={openPromo}>
+    <button className="btnDetalles" onClick={openPromo}>
       Ver detalles
     </button>
   </div>

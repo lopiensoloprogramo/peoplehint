@@ -105,7 +105,7 @@ function NivelAtractivo() {
   return (
     <div className="legacy">
     <div className="app">
-      <div className="legacyh1">¿Qué tan atractivo eres?</div>
+      <div className="legacyh1">¿QUÉ TAN ATRACTIVO ERES?</div>
       <p className="sub">Descúbrelo en segundos. Privacidad Garantizada.</p>
 
       {!image && !loading && !result && (
@@ -178,7 +178,7 @@ function NivelAtractivo() {
               <small>Trabajo, estudios o redes</small>
             </p>
 
-            <button className="btn small" onClick={abrirPublicidad}>
+            <button className="btnQuienes" onClick={abrirPublicidad}>
               VER QUIÉNES
             </button>
           </div>
