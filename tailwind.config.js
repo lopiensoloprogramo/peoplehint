@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    "./src/Home.jsx"
+    "./src/pages/Home.jsx"
   ],
   theme: {
     extend: {},
