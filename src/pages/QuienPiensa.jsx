@@ -102,7 +102,7 @@ export default function QuienPiensa() {
           <option value="crush">Crush</option>
         </select>
 
-        <button onClick={analyze}>Analizar</button>
+        <button className="btnAnalizar"onClick={analyze}>Analizar</button>
 
         {loading && (
           <div className="loading">

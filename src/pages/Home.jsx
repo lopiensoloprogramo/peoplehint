@@ -14,21 +14,35 @@ export default function Home() {
           Descubre lo que otros sienten por ti
         </p>
 
-        <div className="space-y-4">
-          <a
-            href="/nivel-atractivo"
-            className="block w-full bg-white text-purple-700 font-bold py-4 rounded-xl shadow-lg hover:scale-105 transition"
-          >
-            🧲Nivel de Atractivo
-          </a>
+            <div className="space-y-4">
+              <a
+                href="/nivel-atractivo"
+                className="no-underline block w-full bg-white text-purple-700 font-bold py-4 rounded-xl shadow-lg hover:scale-105 transition"
+              >
+                🧲 Nivel de Atractivo
+              </a>
 
-          <a
-            href="/quien-piensa"
-            className="block w-full bg-white text-pink-600 font-bold py-4 rounded-xl shadow-lg hover:scale-105 transition"
-          >
-            💖¿Quién piensa en ti?
-          </a>
-        </div>
+              <a
+                href="/quien-piensa"
+                className="no-underline block w-full bg-white text-pink-600 font-bold py-4 rounded-xl shadow-lg hover:scale-105 transition"
+              >
+                💖 ¿Quién piensa en ti?
+              </a>
+
+              <a
+                href="/quien-observa"
+                className="no-underline block w-full bg-white text-blue-600 font-bold py-4 rounded-xl shadow-lg hover:scale-105 transition"
+              >
+                👁️ ¿Quién te observa?
+              </a>
+
+              <a
+                href="/percepcion-social"
+                className="no-underline block w-full bg-white text-green-600 font-bold py-4 rounded-xl shadow-lg hover:scale-105 transition"
+              >
+                🧠 Percepción Social
+              </a>
+            </div>
 
         <p className="text-xs mt-8 opacity-70">
           Solo para entretenimiento 🔮

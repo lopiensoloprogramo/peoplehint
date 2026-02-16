@@ -2,6 +2,7 @@
   box-sizing: border-box;
   font-family: system-ui, sans-serif;
   margin: 0;
+
 }
 
 .qp-wrapper {
@@ -10,6 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .qp-card {
@@ -40,9 +42,10 @@ input, select {
   margin: 6px 0;
   border-radius: 8px;
   border: 1px solid #ddd;
+  margin-top: 10px;
 }
 
-button {
+.btnAnalizar {
   width: 100%;
   margin-top: 10px;
   margin-bottom: 5px;
@@ -54,17 +57,24 @@ button {
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s;
+  
 }
 
-button:hover {
+.btnAnalizar:hover {
   background: #ff2f85;
 }
+
+
 
 .loading {
   font-size: 13px;
   color: #666;
   margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+
 }
+
 
 .pulse {
   color: #ff4f9a;
@@ -106,7 +116,10 @@ button:hover {
 .share {
   margin-top: 5px;
   background: none;
-  color: #555;
-  text-decoration: underline;
-
+  color: #fff;
+  background: #ff2f85;
+  border-radius: 10px;
+   cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
 }

@@ -48,7 +48,7 @@ const results = {
 export default function PercepcinSocial() {
   const [a, setA] = useState("");
   const [b, setB] = useState("");
-  const [link, setLink] = useState("");
+ const [link, setLink] = useState("placeholder");
   const [loading, setLoading] = useState(false);
   const [value, setValue] = useState(null);
   const [message, setMessage] = useState("");
@@ -64,7 +64,7 @@ export default function PercepcinSocial() {
 
 
   const analyze = () => {
-    if (!a || !b || !link) {
+    if (!a || !b || link === "placeholder") {
       alert("Completa todos los campos");
       return;
     }
@@ -103,24 +103,28 @@ export default function PercepcinSocial() {
 
         <div className="space-y-2 mt-3 text-sm">
           <input
-            className="w-full bg-black border border-green-500 p-1"
+            className="w-full bg-black border border-green-500 p-1 text-green-400 placeholder-gray-500"
             placeholder="Tu nombre"
             value={a}
             onChange={(e) => setA(e.target.value)}
           />
           <input
-            className="w-full bg-black border border-green-500 p-1"
+            className="w-full bg-black border border-green-500 p-1 text-green-400 placeholder-gray-500"
             placeholder="Nombre de la persona..."
             value={b}
             onChange={(e) => setB(e.target.value)}
           />
 
         <select
-          className="w-full bg-black border border-green-500 p-1"
+          className={`w-full bg-black border border-green-500 p-1 
+            ${link === "placeholder" ? "text-gray-500" : "text-green-400"}`}
           value={link}
           onChange={(e) => setLink(e.target.value)}
         >
-          <option value="">Contexto de interacción</option>
+          <option value="placeholder" disabled hidden>
+            Contexto de interacción
+          </option>
+
           <option value="trabajo">Trabajo</option>
           <option value="escuela">Escuela / Universidad</option>
           <option value="redes">Redes sociales</option>
@@ -132,13 +136,15 @@ export default function PercepcinSocial() {
         </select>
 
         </div>
-
-        <button
+<br></br>
+       <button className="mt-30 w-full border border-green-500 py-1 hover:bg-green-500 hover:text-black transition"
           onClick={analyze}
-          className="mt-3 w-full border border-green-500 py-1 hover:bg-green-500 hover:text-black transition"
+         
         >
           INICIAR ESCANEO
         </button>
+     
+ 
 
         <div className="border border-green-500 bg-black/40 rounded p-2 text-center text-xs mt-2">
           <p className="text-green-400 mb-1">Sponsored</p>

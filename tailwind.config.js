@@ -1,9 +1,8 @@
 module.exports = {
-  content: [
-    "./src/pages/Home.jsx"
-  ],
-  theme: {
-    extend: {},
+  corePlugins: {
+    preflight: false,
   },
+  content: ["./src/pages/Home.jsx","./src/pages/PercepcionSocial.jsx"],
+  theme: { extend: {} },
   plugins: [],
 };
