@@ -16,6 +16,13 @@ export default function Home() {
 
             <div className="space-y-4">
               <a
+                href="/detector-infidelidad"
+                className="no-underline block w-full bg-white text-purple-700 font-bold py-4 rounded-xl shadow-lg hover:scale-105 transition"
+              >
+                📱🔍 Detector de Infidelidad
+              </a>
+              
+              <a
                 href="/nivel-atractivo"
                 className="no-underline block w-full bg-white text-purple-700 font-bold py-4 rounded-xl shadow-lg hover:scale-105 transition"
               >
