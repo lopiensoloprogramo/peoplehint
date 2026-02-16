@@ -60,6 +60,10 @@ p {
   font-size: 16px;
   cursor: pointer;
   box-shadow: 0 0 15px rgba(255, 0, 93, 0.5);
+
+  display: flex;              /* 👈 */
+  justify-content: center;   /* 👈 */
+  align-items: center;       /* 👈 */
   text-align: center;
 }
 
