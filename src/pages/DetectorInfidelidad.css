@@ -110,6 +110,20 @@
   pointer-events: none;
 }
 
+.promobanner{
+
+  width: 280px;
+  max-height: 320px;
+  overflow-y: auto; 
+  margin-top: 0px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+
+  margin: auto;
+}
+
+
+
 .overlay.happy { background: #00ff99; }
 .overlay.doubt { background: #ffe600; }
 .overlay.sus { background: #ff9900; }

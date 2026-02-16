@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./DetectorInfidelidad.css"
 const results = [
   { min: 0, max: 20, texts: [
@@ -58,6 +58,40 @@ export default function DetectorInfidelidad() {
     }, 2500);
   };
 
+useEffect(() => {
+  const box = document.getElementById("native-box");
+  if (!box) return;
+
+  box.innerHTML = `
+    <iframe 
+      sandbox="allow-scripts allow-same-origin allow-popups"
+      style="width:100%;height:100%;border:none;overflow:hidden;"
+      srcdoc="
+        <html>
+          <body style='margin:0;padding:0;overflow:hidden;background:transparent;'>
+            <script async data-cfasync='false' 
+              src='https://pl28677830.effectivegatecpm.com/53625cd16e79dc4f5be82578d256686f/invoke.js'>
+            </script>
+            <div id='container-53625cd16e79dc4f5be82578d256686f'></div>
+          </body>
+        </html>
+      ">
+    </iframe>
+  `;
+}, []);
+
+  const abrirPublicidad = () => {
+    const script = document.createElement("script");
+    script.src = "https://pl28711377.effectivegatecpm.com/a4/60/25/a46025604276304ca747eab2ed87afa8.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    setTimeout(() => {
+      document.body.removeChild(script);
+    }, 3000);
+  };
+
+
   return (
     <>
       
@@ -106,6 +140,7 @@ export default function DetectorInfidelidad() {
                   } else {
                     navigator.clipboard.writeText(text);
                     alert("Resultado copiado 👍");
+                    
                   }
                 }}
                 className="di-share">
@@ -114,9 +149,8 @@ export default function DetectorInfidelidad() {
             </div>
           )}
 
-            <div> 
-              <script src="https://pl28662229.effectivegatecpm.com/78/db/1f/78db1f99523b729d414ccd63bbfb2c21.js">
-              </script> 
+            <div className="promobanner"> 
+                <div id="native-box"></div>
               </div>
 
 

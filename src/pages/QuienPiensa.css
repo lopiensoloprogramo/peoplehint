@@ -19,7 +19,7 @@
   padding: 25px;
   padding-bottom: 0px;
   width: 100%;
-  max-width: 380px;
+  max-width: 480px;
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0,0,0,.2);
   text-align: center;
@@ -72,7 +72,7 @@ input, select {
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
-
+  margin: auto;
 }
 
 
@@ -88,14 +88,16 @@ input, select {
   100% {opacity: .4}
 }
 
-.result {
+.resultados {
   margin-top: 15px;
+  height: auto;
 }
 
 .percent {
   font-size: 42px;
   font-weight: bold;
   color: #ff2f85;
+  margin-top: -2%;
 }
 
 .msg {
@@ -114,7 +116,8 @@ input, select {
 }
 
 .share {
-  margin-top: 5px;
+  margin-bottom: 2%;
+  margin-top: 1.5%;
   background: none;
   color: #fff;
   background: #ff2f85;
@@ -122,4 +125,16 @@ input, select {
    cursor: pointer;
   transition: 0.2s;
   text-decoration: none;
+}
+
+.promoquien{
+
+  width: 280px;
+  max-height: 320px;
+  overflow-y: auto; 
+  margin-top: 0px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+
+  margin: auto;
 }

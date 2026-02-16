@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./QuienPiensa.css";
 
 const sound = new Audio("/cargando.mp3");
@@ -84,6 +84,31 @@ export default function QuienPiensa() {
       setLoading(false);
     }, 4200);
   };
+useEffect(() => {
+  const box = document.getElementById("native-caja");
+  if (!box) return;
+
+  box.innerHTML = `
+    <iframe 
+      sandbox="allow-scripts allow-same-origin allow-popups"
+      style="width:100%;height:100%;border:none;overflow:hidden;"
+      srcdoc="
+        <html>
+          <body style='margin:0;padding:0;overflow:hidden;background:transparent;'>
+            <script async data-cfasync='false' 
+              src='https://pl28677830.effectivegatecpm.com/53625cd16e79dc4f5be82578d256686f/invoke.js'>
+            </script>
+            <div id='container-53625cd16e79dc4f5be82578d256686f'></div>
+          </body>
+        </html>
+      ">
+    </iframe>
+  `;
+}, []);
+
+
+
+
 
   return (
     <div className="qp-wrapper">
@@ -103,7 +128,9 @@ export default function QuienPiensa() {
         </select>
 
         <button className="btnAnalizar"onClick={analyze}>Analizar</button>
-
+              <div className="promoquien"> 
+                <div id="native-caja"></div>
+              </div>
         {loading && (
           <div className="loading">
             <p>🔍 Analizando patrones...</p>
@@ -114,7 +141,7 @@ export default function QuienPiensa() {
         )}
 
         {value !== null && (
-          <div className="result">
+          <div className="resultados">
             <div className="percent">{value}%</div>
             <p className="msg">{message}</p>
             {emotion && <p className="emotion">{emotion}</p>}
@@ -127,7 +154,10 @@ export default function QuienPiensa() {
               }}>
               Compartir
             </button>
+
+
           </div>
+          
         )}
       </div>
     </div>
