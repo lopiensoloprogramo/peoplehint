@@ -15,6 +15,14 @@ export default function Home() {
         </p>
 
             <div className="space-y-4">
+
+              <a
+                href="/test-ci"
+                className="no-underline block w-full bg-white text-purple-700 font-bold py-4 rounded-xl shadow-lg hover:scale-105 transition"
+              >
+                🧠 Test de Inteligencia CI
+              </a>
+
               <a
                 href="/detector-infidelidad"
                 className="no-underline block w-full bg-white text-purple-700 font-bold py-4 rounded-xl shadow-lg hover:scale-105 transition"
