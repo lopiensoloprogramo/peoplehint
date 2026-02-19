@@ -18,7 +18,7 @@ export default function Home() {
 
                <a
                 href="/insta-vistos"
-                className="no-underline block w-full bg-white text-green-600 font-bold py-4 rounded-xl shadow-lg hover:scale-105 transition"
+                className="no-underline block w-full bg-white text-blue-600 font-bold py-4 rounded-xl shadow-lg hover:scale-105 transition"
               >
                 👀¿Quien ve tu perfil de Instagram?
               </a>             
