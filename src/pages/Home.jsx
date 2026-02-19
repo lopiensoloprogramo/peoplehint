@@ -16,6 +16,13 @@ export default function Home() {
 
             <div className="space-y-4">
 
+               <a
+                href="/insta-vistos"
+                className="no-underline block w-full bg-white text-green-600 font-bold py-4 rounded-xl shadow-lg hover:scale-105 transition"
+              >
+                👀¿Quien ve tu perfil de Instagram?
+              </a>             
+
               <a
                 href="/test-ci"
                 className="no-underline block w-full bg-white text-purple-700 font-bold py-4 rounded-xl shadow-lg hover:scale-105 transition"
@@ -58,7 +65,7 @@ export default function Home() {
                 🧠 Percepción Social
               </a>
             </div>
-
+            
         <p className="text-xs mt-8 opacity-70">
           Solo para entretenimiento 🔮
         </p>

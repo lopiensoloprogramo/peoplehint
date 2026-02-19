@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import PercepcinSocial from "./pages/PercepcionSocial"
 import DetectorInfidelidad from "./pages/DetectorInfidelidad";
 import TestCI from "./pages/TestCI";
+import InstaVistos from "./pages/InstaVistos";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Route path="quien-observa" element={<QuienObserva/>} />  
       <Route path="percepcion-social" element={<PercepcinSocial/>} />  
       <Route path="test-ci" element={<TestCI/>} />  
+      <Route path="insta-vistos" element={<InstaVistos/>} />  
       
     </Routes>
   );

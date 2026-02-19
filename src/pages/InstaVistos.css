@@ -1,0 +1,93 @@
+.insta-app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, sans-serif;
+  color: white;
+}
+
+.insta-card {
+  background: rgba(0,0,0,.8);
+  padding: 25px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0,0,0,.5);
+}
+
+.insta-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  margin: 12px 0;
+  font-size: 16px;
+  outline: none;
+}
+
+.insta-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.insta-promo{
+    
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.insta-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.insta-btn:hover:not(:disabled) {
+  background: #f3f4f6;
+}
+
+.loader {
+  text-align: center;
+}
+
+.spin {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #fff;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto;
+
+}
+
+
+
+.fade {
+  animation: fade .4s ease;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
