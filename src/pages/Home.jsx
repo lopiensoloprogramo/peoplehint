@@ -6,7 +6,8 @@ export default function Home() {
       
       <div className="max-w-sm w-full text-center">
         
-        <h1 className="text-4xl font-extrabold mb-2 drop-shadow-lg">
+        <h1 className="text-4xl font-extrabold mb-2 drop-shadow-lg -mt-10">
+
           PeopleHint 👀
         </h1>
 
@@ -66,7 +67,7 @@ export default function Home() {
               </a>
             </div>
             
-        <p className="text-xs mt-8 opacity-70">
+        <p className="text-xs mt-3 opacity-70 ">
           Solo para entretenimiento 🔮
         </p>
       </div>
