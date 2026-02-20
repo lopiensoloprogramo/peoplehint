@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./InstaVistos.css";
-
+import Minifoter from "../Components/Minifoter";
 export default function InstaVistos() {
   const [user, setUser] = useState("");
   const [step, setStep] = useState(0);
@@ -94,6 +94,7 @@ const abrirPopunder = () => {
             >
               🔓 Ver quienes son
             </button>
+                <Minifoter/>
           </div>
         )}
       </div>

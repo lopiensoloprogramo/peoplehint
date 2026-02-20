@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Testci.css";
-
+import Minifoter from "../Components/Minifoter";
 const preguntas = [
   { q: "¿Qué número sigue? 2 – 6 – 18 – ?", options: ["24", "36", "20", "30"] },
   { 
@@ -10,14 +10,14 @@ const preguntas = [
   },
   { q: "¿Qué palabra NO pertenece al grupo?", options: ["Manzana", "Pera", "Zanahoria", "Plátano"] },
   { q: "Completa: 3, 9, 27, ___", options: ["54", "81", "72", "90"] },
-  { q: "Si A = 1, B = 2, C = 3... ¿Cuánto vale CAB?", options: ["312", "321", "213", "231"] },
+  { q: "Si A = 1, B = 2, C = 3... ¿Cuánto vale CAB?", options: ["312", "321", "213", "231"],className: "long" },
   { q: "¿Qué número falta? 5 – 10 – 20 – __", options: ["25", "30", "40", "50"] },
   { q: "¿Cuál es el intruso?", options: ["Perro", "Gato", "Caballo", "Mesa"] },
   { q: "Completa: 1, 1, 2, 3, 5, __", options: ["6", "7", "8", "13"] },
   {
     q: "¿Qué figura completa la secuencia?",
     seq: "⬜ ⬛ ⬜ ⬛ ⬜ ?",
-    options: ["⬜", "⬛", "🔺", "⚪"]
+    options: ["⬜", "⬛", "🔺", "⚪"],className: "long"
   },
   { q: "¿Qué número sigue? 4 – 9 – 16 – __", options: ["20", "23", "25", "30"] }
 ];
@@ -129,8 +129,9 @@ export default function TestCI() {
 
           </div>
         )}
-
+ <Minifoter/>
       </div>
+     
     </div>
   );
 }

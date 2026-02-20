@@ -1,0 +1,36 @@
+.prueba{
+    margin-top: 8%;
+    color: #f3f4f6;
+    font-weight: 500;
+}
+
+.footer-links {
+  text-align: center;
+  white-space: nowrap; /* evita que se bajen */
+  margin-top: 2%;
+}
+
+.footer-links a {
+  display: inline-block;
+  margin: 0 2%;
+  color: #888;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0-8rem;
+}
+
+.footer-links a:nth-child(1) {
+  color: #ff4d4d;
+}
+
+.footer-links a:nth-child(2) {
+  color: #4da6ff;
+}
+
+.footer-links a:nth-child(3) {
+  color: #66cc66;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}

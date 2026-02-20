@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
 import "./DetectorInfidelidad.css"
+
 const results = [
   { min: 0, max: 20, texts: [
     "Solo curiosidad 👀",
@@ -156,6 +157,7 @@ useEffect(() => {
 
 
         </div>
+      
       </div>
     </>
   );

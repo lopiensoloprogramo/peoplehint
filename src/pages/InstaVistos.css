@@ -41,7 +41,7 @@
 }
 
 .insta-promo{
-    
+
   width: 100%;
   padding: 12px;
   margin-top: 10px;
@@ -78,10 +78,11 @@
 }
 
 
-
 .fade {
   animation: fade .4s ease;
 }
+
+
 
 @keyframes spin {
   to { transform: rotate(360deg); }
