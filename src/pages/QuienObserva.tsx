@@ -1,6 +1,7 @@
 import { useState,useEffect } from "react";
 import "./QuienObserva.css";
-
+import "../Components/Minifooter"
+import Minifooter from "../Components/Minifooter";
 const resultados = [
   "Alguien cercano siente una fuerte envidia por ti.",
   "Esa mirada no es admiración… es envidia.",
@@ -154,9 +155,13 @@ const generarNombre = () => {
       Ver detalles
     </button>
   </div>
+  
 )}
+  
     </div>
+  <Minifooter/>
     </div>
+    
   );
 }
 

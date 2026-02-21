@@ -1,5 +1,7 @@
 import { useState,useEffect } from "react";
 import "./DetectorInfidelidad.css"
+import "../Components/Minifooter"
+import Minifooter from "../Components/Minifooter";
 
 const results = [
   { min: 0, max: 20, texts: [
@@ -154,7 +156,7 @@ useEffect(() => {
                 <div id="native-box"></div>
               </div>
 
-
+          <Minifooter/>
 
         </div>
       

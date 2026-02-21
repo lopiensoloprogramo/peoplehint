@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Testci.css";
-import Minifoter from "../Components/Minifoter";
+import Minifoter from "../Components/Minifooter";
 const preguntas = [
   { q: "¿Qué número sigue? 2 – 6 – 18 – ?", options: ["24", "36", "20", "30"] },
   { 

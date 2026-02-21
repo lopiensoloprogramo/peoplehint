@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "./InstaVistos.css";
-import Minifoter from "../Components/Minifoter";
+import Minifoter from "../Components/Minifooter";
 export default function InstaVistos() {
   const [user, setUser] = useState("");
   const [step, setStep] = useState(0);
   const [loading, setLoading] = useState(false);
   const [vistos, setVistos] = useState(0);
 
+  const [namemicro,setnamemicro]=useState("insta")
 const analizar = () => {
   const limpio = user.trim().replace(/^@/, "");
   const regex = /^[a-zA-Z0-9._]{3,30}$/;

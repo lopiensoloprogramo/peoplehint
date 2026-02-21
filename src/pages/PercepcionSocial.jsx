@@ -1,4 +1,5 @@
 import { useState,useEffect } from "react";
+import Minifooter from "../Components/Minifooter";
 
 const results = {
   trabajo: [
@@ -151,9 +152,11 @@ export default function PercepcinSocial() {
 
           <div
             id="container-d686662595f7d3b09cd4a320ee0e24a1"
-            className="min-h-[90px] flex items-center justify-center"
+            className="min-h-[90px] flex items-center justify-center -mb-5"
           ></div>
+          <Minifooter/>
         </div>
+        
 
 
         {loading && (

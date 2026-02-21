@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import "./nivelAtractivo.css";
+import "../Components/Minifooter"
+import Minifooter from "../Components/Minifooter";
 
 const mensajes = [
   { txt: "Magnetismo puro", min: 88, max: 97 },
@@ -124,9 +126,11 @@ function NivelAtractivo() {
         <div className="promo-box">
           <div
             id="container-e3cd318543c99f5655fb82c6325acab5"
-            style={{ fontSize: 12, opacity: 0.8 }}
+            style={{ fontSize: 12, opacity: 0.8, maxHeight:200, overflow:"hidden" }}
           ></div>
+          
         </div>
+        
       )}
 
       {loading && (
@@ -182,6 +186,7 @@ function NivelAtractivo() {
               VER QUIÉNES
             </button>
           </div>
+          <Minifooter/>
         </div>
       )}
     </div>

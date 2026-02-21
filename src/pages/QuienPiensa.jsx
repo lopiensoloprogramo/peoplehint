@@ -1,5 +1,7 @@
 import { useState,useEffect } from "react";
 import "./QuienPiensa.css";
+import "../Components/Minifooter"
+import Minifooter from "../Components/Minifooter";
 
 const sound = new Audio("/cargando.mp3");
 
@@ -159,7 +161,9 @@ useEffect(() => {
           </div>
           
         )}
+
       </div>
+    
     </div>
   );
 }
