@@ -57,7 +57,7 @@ const abrirPopunder = () => {
             <p>Descubre cuántas personas revisaron tu Instagram en los últimos 30 días.</p>
 
             <input
-              className="insta-input"
+              className="insta-input text-black"
               placeholder="@usuario"
               value={user}
               onChange={(e) => setUser(e.target.value)}
