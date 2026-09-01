@@ -15,7 +15,7 @@ import Porcentaje from "./pages/calculadoras/Porcentaje";
 import Edad from "./pages/calculadoras/Edad";
 import Descuento from "./pages/calculadoras/Descuento";
 import IMC from "./pages/calculadoras/IMC";
-import Navbar from "./components/Navbar";
+import Navbar from "./Components/Navbar";
 export default function App() {
   return (
     <>
