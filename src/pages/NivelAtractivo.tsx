@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./nivelAtractivo.css";
+
 import "../Components/Minifooter"
 import Minifooter from "../Components/Minifooter";
 

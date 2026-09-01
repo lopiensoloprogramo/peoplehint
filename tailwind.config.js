@@ -1,8 +1,11 @@
-module.exports = {
-  corePlugins: {
-    preflight: false,
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
   },
-  content: ["./src/pages/Home.jsx","./src/pages/PercepcionSocial.jsx"],
-  theme: { extend: {} },
   plugins: [],
 };
