@@ -1,36 +1,54 @@
-import { useState,useEffect } from "react";
-
-import "../Components/Minifooter"
+import { useState, useEffect } from "react";
 import Minifooter from "../Components/Minifooter";
 
 const sound = new Audio("/cargando.mp3");
 
 const results = [
-  { min: 0, max: 20, texts: [
-    "No se detectan patrones frecuentes de interés.",
-    "Interacciones digitales mínimas encontradas.",
-    "Coincidencias emocionales muy bajas."
-  ]},
-  { min: 21, max: 40, texts: [
-    "Patrones ocasionales de interés detectados.",
-    "Comportamiento intermitente en búsquedas.",
-    "Se registran algunas coincidencias emocionales."
-  ]},
-  { min: 41, max: 60, texts: [
-    "Patrones frecuentes de interés.",
-    "Interacciones digitales recurrentes.",
-    "Coincidencias emocionales moderadas."
-  ]},
-  { min: 61, max: 80, texts: [
-    "Alta frecuencia de interés detectada.",
-    "Búsquedas relacionadas constantes.",
-    "Coincidencias emocionales elevadas."
-  ]},
-  { min: 81, max: 100, texts: [
-    "Interés extremadamente alto detectado.",
-    "Patrones obsesivos de búsqueda.",
-    "Coincidencias emocionales máximas."
-  ]},
+  {
+    min: 0,
+    max: 20,
+    texts: [
+      "No se detectan patrones frecuentes de interés.",
+      "Interacciones digitales mínimas encontradas.",
+      "Coincidencias emocionales muy bajas.",
+    ],
+  },
+  {
+    min: 21,
+    max: 40,
+    texts: [
+      "Patrones ocasionales de interés detectados.",
+      "Comportamiento intermitente en búsquedas.",
+      "Se registran algunas coincidencias emocionales.",
+    ],
+  },
+  {
+    min: 41,
+    max: 60,
+    texts: [
+      "Patrones frecuentes de interés.",
+      "Interacciones digitales recurrentes.",
+      "Coincidencias emocionales moderadas.",
+    ],
+  },
+  {
+    min: 61,
+    max: 80,
+    texts: [
+      "Alta frecuencia de interés detectada.",
+      "Búsquedas relacionadas constantes.",
+      "Coincidencias emocionales elevadas.",
+    ],
+  },
+  {
+    min: 81,
+    max: 100,
+    texts: [
+      "Interés extremadamente alto detectado.",
+      "Patrones obsesivos de búsqueda.",
+      "Coincidencias emocionales máximas.",
+    ],
+  },
 ];
 
 const emotionalMessages = [
@@ -43,7 +61,7 @@ const emotionalMessages = [
   "Siente curiosidad constante por tu vida.",
   "No logra sacarte de su cabeza.",
   "Hay algo pendiente entre ustedes.",
-  "Te recuerda más de lo que imaginas."
+  "Te recuerda más de lo que imaginas.",
 ];
 
 export default function QuienPiensa() {
@@ -70,15 +88,29 @@ export default function QuienPiensa() {
 
     setTimeout(() => {
       const v = Math.floor(Math.random() * 101);
-      const r = results.find(x => v >= x.min && v <= x.max) || results[0];
-      let base = r.texts[Math.floor(Math.random() * r.texts.length)];
 
-      if (link === "ex" && v >= 60) base = "Se detectan patrones emocionales no resueltos.";
-      if (link === "crush" && v >= 60) base = "Hay una fuerte proyección emocional.";
-      if (link === "pareja" && v <= 40) base = "La conexión emocional parece debilitada.";
+      const r =
+        results.find((x) => v >= x.min && v <= x.max) || results[0];
+
+      let base =
+        r.texts[Math.floor(Math.random() * r.texts.length)];
+
+      if (link === "ex" && v >= 60) {
+        base = "Se detectan patrones emocionales no resueltos.";
+      }
+
+      if (link === "crush" && v >= 60) {
+        base = "Hay una fuerte proyección emocional.";
+      }
+
+      if (link === "pareja" && v <= 40) {
+        base = "La conexión emocional parece debilitada.";
+      }
 
       const randomEmotion =
-        emotionalMessages[Math.floor(Math.random() * emotionalMessages.length)];
+        emotionalMessages[
+          Math.floor(Math.random() * emotionalMessages.length)
+        ];
 
       setValue(v);
       setMessage(`${base} (${link})`);
@@ -86,84 +118,249 @@ export default function QuienPiensa() {
       setLoading(false);
     }, 4200);
   };
-useEffect(() => {
-  const box = document.getElementById("native-caja");
-  if (!box) return;
 
-  box.innerHTML = `
-    <iframe 
-      sandbox="allow-scripts allow-same-origin allow-popups"
-      style="width:100%;height:100%;border:none;overflow:hidden;"
-      srcdoc="
-        <html>
-          <body style='margin:0;padding:0;overflow:hidden;background:transparent;'>
-            <script async data-cfasync='false' 
-              src='https://pl28677830.effectivegatecpm.com/53625cd16e79dc4f5be82578d256686f/invoke.js'>
-            </script>
-            <div id='container-53625cd16e79dc4f5be82578d256686f'></div>
-          </body>
-        </html>
-      ">
-    </iframe>
-  `;
-}, []);
+  useEffect(() => {
+    const box = document.getElementById("native-caja");
 
+    if (!box) return;
 
-
-
+    box.innerHTML = `
+      <iframe 
+        sandbox="allow-scripts allow-same-origin allow-popups"
+        style="width:100%;height:100%;border:none;overflow:hidden;"
+        srcdoc="
+          <html>
+            <body style='margin:0;padding:0;overflow:hidden;background:transparent;'>
+              <script async data-cfasync='false' 
+                src='https://pl28677830.effectivegatecpm.com/53625cd16e79dc4f5be82578d256686f/invoke.js'>
+              </script>
+              <div id='container-53625cd16e79dc4f5be82578d256686f'></div>
+            </body>
+          </html>
+        "
+      ></iframe>
+    `;
+  }, []);
 
   return (
-    <div className="qp-wrapper">
-      <div className="qp-card">
-        <h1>💭 ¿Qué tanto piensa en ti?</h1>
-        <p className="sub">Pon dos nombres y descúbrelo...</p>
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-100 px-4 py-8">
 
-        <input placeholder="Tu nombre" value={a} onChange={e=>setA(e.target.value)} />
-        <input placeholder="Nombre de esa persona" value={b} onChange={e=>setB(e.target.value)} />
+      <div className="max-w-xl mx-auto">
 
-        <select value={link} onChange={(e)=>setLink(e.target.value)}>
-          <option value="">Tipo de vínculo</option>
-          <option value="amigos">Amigos</option>
-          <option value="pareja">Pareja</option>
-          <option value="ex">Ex</option>
-          <option value="crush">Crush</option>
-        </select>
+        {/* VOLVER */}
+        <a
+          href="/"
+          className="inline-flex items-center gap-1 mb-6 text-purple-600 hover:text-purple-800 font-semibold no-underline transition"
+        >
+          ← Volver a PeopleHint
+        </a>
 
-        <button className="btnAnalizar"onClick={analyze}>Analizar</button>
-              <div className="promoquien"> 
-                <div id="native-caja"></div>
-              </div>
-        {loading && (
-          <div className="loading">
-            <p>🔍 Analizando patrones...</p>
-            <p>📱 Comparando datos...</p>
-            <p>🧠 Evaluando emociones...</p>
-            <p className="pulse">Generando resultado...</p>
+        {/* TARJETA PRINCIPAL */}
+        <div className="bg-white rounded-3xl shadow-xl border border-purple-100 overflow-hidden">
+
+          {/* CABECERA */}
+          <div className="bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 px-6 py-8 text-center text-white">
+
+            <div className="text-5xl mb-3">
+              💭
+            </div>
+
+            <h1 className="text-3xl md:text-4xl font-extrabold">
+              ¿Qué tanto piensa en ti?
+            </h1>
+
+            <p className="mt-2 text-white/85 text-sm md:text-base">
+              Pon dos nombres y descúbrelo...
+            </p>
+
           </div>
-        )}
 
-        {value !== null && (
-          <div className="resultados">
-            <div className="percent">{value}%</div>
-            <p className="msg">{message}</p>
-            {emotion && <p className="emotion">{emotion}</p>}
+          {/* FORMULARIO */}
+          <div className="p-6 md:p-8 space-y-4">
 
-            <button className="share"
-              onClick={() => {
-                const text = `${b} piensa en ${a} un ${value}% 😳`;
-                navigator.share ? navigator.share({ text }) :
-                (navigator.clipboard.writeText(text), alert("Copiado 👍"));
-              }}>
-              Compartir
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Tu nombre
+              </label>
+
+              <input
+                type="text"
+                placeholder="Tu nombre"
+                value={a}
+                onChange={(e) => setA(e.target.value)}
+                className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-100 transition"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Nombre de esa persona
+              </label>
+
+              <input
+                type="text"
+                placeholder="Nombre de esa persona"
+                value={b}
+                onChange={(e) => setB(e.target.value)}
+                className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-100 transition"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Tipo de vínculo
+              </label>
+
+              <select
+                value={link}
+                onChange={(e) => setLink(e.target.value)}
+                className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-100 transition cursor-pointer"
+              >
+                <option value="">
+                  Tipo de vínculo
+                </option>
+
+                <option value="amigos">
+                  Amigos
+                </option>
+
+                <option value="pareja">
+                  Pareja
+                </option>
+
+                <option value="ex">
+                  Ex
+                </option>
+
+                <option value="crush">
+                  Crush
+                </option>
+              </select>
+            </div>
+
+            {/* BOTÓN */}
+            <button
+              type="button"
+              onClick={analyze}
+              disabled={loading}
+              className="w-full rounded-xl bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 text-white font-bold py-4 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+            >
+              {loading ? "🔍 Analizando..." : "💭 Analizar"}
             </button>
 
+          </div>
+
+
+          {/* PUBLICIDAD */}
+          <div className="px-6 pb-6">
+
+            <div className="w-full h-28 rounded-xl bg-gray-50 border border-gray-100 overflow-hidden">
+
+              <div
+                id="native-caja"
+                className="w-full h-full"
+              />
+
+            </div>
 
           </div>
-          
-        )}
+
+
+          {/* LOADING */}
+          {loading && (
+
+            <div className="mx-6 mb-6 rounded-2xl bg-purple-50 border border-purple-100 p-6 text-center">
+
+              <div className="text-4xl mb-4 animate-pulse">
+                🔍
+              </div>
+
+              <div className="space-y-2 text-sm text-purple-700">
+
+                <p>
+                  🔍 Analizando patrones...
+                </p>
+
+                <p>
+                  📱 Comparando datos...
+                </p>
+
+                <p>
+                  🧠 Evaluando emociones...
+                </p>
+
+                <p className="font-bold animate-pulse">
+                  Generando resultado...
+                </p>
+
+              </div>
+
+            </div>
+
+          )}
+
+
+          {/* RESULTADO */}
+          {value !== null && (
+
+            <div className="mx-6 mb-6 rounded-2xl bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 border border-purple-100 p-6 text-center">
+
+              <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                Nivel de conexión
+              </p>
+
+              <div className="text-6xl md:text-7xl font-extrabold text-purple-600 my-4">
+                {value}%
+              </div>
+
+              <div className="bg-white rounded-xl p-4 shadow-sm">
+
+                <p className="text-gray-700 font-semibold">
+                  {message}
+                </p>
+
+                {emotion && (
+                  <p className="text-pink-600 text-sm mt-3 italic">
+                    💖 {emotion}
+                  </p>
+                )}
+
+              </div>
+
+              {/* COMPARTIR */}
+              <button
+                type="button"
+                className="mt-5 rounded-xl bg-purple-600 text-white font-bold px-6 py-3 hover:bg-purple-700 transition shadow-md"
+                onClick={() => {
+                  const text = `${b} piensa en ${a} un ${value}% 😳`;
+
+                  navigator.share
+                    ? navigator.share({ text })
+                    : (
+                        navigator.clipboard.writeText(text),
+                        alert("Copiado 👍")
+                      );
+                }}
+              >
+                📤 Compartir resultado
+              </button>
+
+            </div>
+
+          )}
+
+        </div>
+
+        {/* AVISO */}
+        <p className="text-center text-xs text-gray-500 mt-5 px-4">
+          🔮 Esta herramienta es únicamente para entretenimiento.
+          Los resultados son generados de forma recreativa.
+        </p>
+
+        <Minifooter />
 
       </div>
-    
+
     </div>
   );
 }
