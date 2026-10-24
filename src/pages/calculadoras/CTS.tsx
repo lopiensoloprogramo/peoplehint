@@ -86,7 +86,7 @@ export default function CTS() {
   const [familyAllowance, setFamilyAllowance] = useState(false);
   const [gratuity, setGratuity] = useState("0");
   const [variables, setVariables] = useState("0");
-  const [period, setPeriod] = useState<Period>("mayo");
+  const [period, setPeriod] = useState<Period>("noviembre");
   const [year, setYear] = useState(String(today.getFullYear()));
 
   const result = useMemo(() => {
@@ -160,7 +160,7 @@ export default function CTS() {
     setFamilyAllowance(false);
     setGratuity("0");
     setVariables("0");
-    setPeriod("mayo");
+    setPeriod("noviembre");
     setYear(String(today.getFullYear()));
   }
 
