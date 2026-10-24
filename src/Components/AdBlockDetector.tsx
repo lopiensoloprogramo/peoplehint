@@ -6,7 +6,7 @@ export default function AdBlockDetector() {
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
-    let active = true;
+    let active = false;
 
     const script = document.createElement("script");
     script.src = "https://quge5.com/88/tag.min.js";
