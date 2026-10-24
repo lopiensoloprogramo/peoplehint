@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function AdBlockDetector() {
   const [adBlockDetected, setAdBlockDetected] = useState(false);
   const [checked, setChecked] = useState(false);
-
+const TEST_MODE = true;
   useEffect(() => {
     let active = false;
 
@@ -36,14 +36,14 @@ export default function AdBlockDetector() {
     document.head.appendChild(script);
 
     return () => {
-      active = false;
+      active = true;
       window.clearTimeout(timeout);
       script.remove();
     };
   }, []);
 
   if (!checked || !adBlockDetected) return null;
-
+if (TEST_MODE) return null;
   return (
     <div className="fixed inset-0 z-[999999] bg-black flex items-center justify-center p-6">
       <div className="max-w-md w-full bg-gray-900 border border-red-600 rounded-2xl p-6 text-center">
