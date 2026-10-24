@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function AdBlockDetector() {
   const [adBlockDetected, setAdBlockDetected] = useState(false);
   const [checked, setChecked] = useState(false);
-/*
+
   useEffect(() => {
     let active = true;
 
@@ -41,7 +41,7 @@ export default function AdBlockDetector() {
       script.remove();
     };
   }, []);
-*/
+
   if (!checked || !adBlockDetected) return null;
 
   return (
