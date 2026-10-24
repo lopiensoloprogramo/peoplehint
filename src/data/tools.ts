@@ -57,6 +57,17 @@ export const tools: Tool[] = [
     path: "/calculadoras/imc",
     category: "calculadoras",
   },
+  
+{
+  id: "cts",
+  title: "Calculadora de CTS",
+  description: "Calcula tu Compensación por Tiempo de Servicios en Perú según tu sueldo, fecha de ingreso y régimen laboral.",
+  icon: "💰",
+  path: "/calculadoras/cts",
+  category: "calculadoras",
+  popular: true,
+},
+
 
   // ==========================================
   // TESTS

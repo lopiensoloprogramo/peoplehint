@@ -16,6 +16,8 @@ import Edad from "./pages/calculadoras/Edad";
 import Descuento from "./pages/calculadoras/Descuento";
 import IMC from "./pages/calculadoras/IMC";
 import Navbar from "./Components/Navbar";
+import CTS from "./pages/calculadoras/CTS"
+
 export default function App() {
   return (
     <>
@@ -37,6 +39,7 @@ export default function App() {
       <Route path="/calculadoras/edad" element={<Edad />}/>
       <Route path="/calculadoras/descuento" element={<Descuento />}/>
       <Route path="/calculadoras/imc" element={<IMC />}/>
+      <Route path="/calculadoras/cts" element={<CTS />} />
 
 
     </Routes>
