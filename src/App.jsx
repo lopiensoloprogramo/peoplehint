@@ -23,6 +23,7 @@ import CTS from "./pages/calculadoras/CTS";
 import Navbar from "./Components/Navbar";
 import AdBlockDetector from "./Components/AdBlockDetector";
 
+import Predictorv1 from "./Components/Predictorv1"
 export default function App() {
   return (
     <>
@@ -101,6 +102,10 @@ export default function App() {
         <Route
           path="/calculadoras/cts"
           element={<CTS />}
+        />
+                <Route
+          path="/predictorv1"
+          element={<Predictorv1 />}
         />
       </Routes>
     </>
